@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Warehouse Management System</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#2563eb,#0f172a);
+
+}
+
+.login-box{
+
+width:400px;
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.login-box h1{
+
+text-align:center;
+color:#2563eb;
+margin-bottom:10px;
+
+}
+
+.login-box p{
+
+text-align:center;
+color:gray;
+margin-bottom:30px;
+
+}
+
+.input-group{
+
+margin-bottom:20px;
+
+}
+
+.input-group label{
+
+display:block;
+margin-bottom:8px;
+font-weight:bold;
+
+}
+
+.input-group input{
+
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+
+}
+
+.input-group input:focus{
+
+border-color:#2563eb;
+outline:none;
+
+}
+
+button{
+
+width:100%;
+padding:14px;
+background:#2563eb;
+color:white;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#1d4ed8;
+
+}
+
+.footer{
+
+margin-top:20px;
+text-align:center;
+font-size:14px;
+color:gray;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>🏭 Smart WMS</h1>
+
+<p>Warehouse Management System</p>
+<form>
+
+<div class="input-group">
+
+<label>Username</label>
+
+<input type="text"
+id="username"
+placeholder="Enter Username">
+
+</div>
+
+<div class="input-group">
+
+<label>Password</label>
+
+<input type="password"
+id="password"
+placeholder="Enter Password">
+
+</div>
+
+<button type="button" onclick="login()">
+
+Login
+
+</button>
+
+</form>
+
+<div class="footer">
+
+© 2026 Smart Warehouse Management System
+
+</div>
+</div>
+
+<script>
+
+function login(){
+
+let username=document.getElementById("username").value.trim();
+let password=document.getElementById("password").value.trim();
+
+if(username=="" || password==""){
+
+alert("⚠ Please enter Username and Password");
+return;
+
+}
+
+if(username=="admin" && password=="admin123"){
+
+alert("✅ Login Successful");
+
+window.location.href="dashboard.html";
+
+}
+else{
+
+alert("❌ Invalid Username or Password");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
